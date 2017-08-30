@@ -1,56 +1,12 @@
 <!DOCTYPE html>
 <html> 
-<!--Password Cracking-->
-<div class = 'button'>
-<input type="text" id="password" />
-<button onclick="hacker()"></button>
-<p id="results"> </p>
-</div>
-<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
-<script type="text/javascript">
-    function main() {
- $('.button').hide();
- $('.button').fadeIn(1000);
-}
- $(document).ready(main);
-</script>
-<script type="text/javascript">
- var alphabet= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()+=,./:;? ';
- var letterNumber = 0;
- var charNumber = 0;
- var hackedPassword = '';
- var encodedNum = 0;
- var decodedNum = 0;
- function hacker(){
-    var password=document.getElementById('password').value;
-    var length = password.length;
-
-    if (password[letterNumber]==alphabet[charNumber]){
-        console.log(alphabet[charNumber]);
-        console.log(charNumber);
-        encodedNum = ((5*(charNumber*5-5)+5)/5);
-        console.log(encodedNum);
-        decodedNum = ((((encodedNum*5)-5)/5)+5)/5;
-        console.log(decodedNum);
-        hackedPassword +=alphabet[charNumber];
-        letterNumber++;
-        charNumber = 0;
-        if (letterNumber==length) {
-            console.log('The password is: '+ hackedPassword);
-            var resultText = document.getElementById("results");
-            resultText.innerHTML = 'The password is: '+ hackedPassword;
-            letterNumber = 0;
-            charNumber = 0;
-            hackedPassword = '';
-            document.getElementById('password').value = '';
-        } else {
-            hacker();
-        }
-    } else {
-        charNumber++;
-        hacker();
-    }
-}
+<img src="https://i.imgur.com/9cDBTwr.png" /> <!--inserted image of head-->
+<img src="https://i.imgur.com/FsPVpd6.png" /> <!--inserted image of chest-->
+<img src="https://i.imgur.com/86qVP4E.png" /> <!--inserted image of abd-->
+<img src="https://i.imgur.com/6IG0GUQ.png" /> <!--inserted image of pelvis-->
+<img src="https://i.imgur.com/SWoH060.png" /> <!--inserted image of legs-->
+<script>
+ <img
 </script>
 </html>
 
