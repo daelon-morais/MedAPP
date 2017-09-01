@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<!--these tags allow Javasript to be exxecuted-->
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <!--this links to a file containing CSS formatting provided by jQuery-->
+      <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+      <!--these tags allow Javasript to be exxecuted-->
       <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<!-- the following link sets the icon image that will be placed on a device home screen if the user makes a shortcut-->
-      <link rel="apple-touch-icon" href="/custom_icon.png">
+    </head>
 <script>
         // The following code lets you know when the file was last modified. 
         // This will help you know if you are looking at the new version of the file or if there is a delay on GitHub.
@@ -14,28 +16,55 @@
         alert("This file last modified  " + docMod);
         console.log("This file last modified  " + docMod);
 </script>
- 
 <style>
-.center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid black;
-    padding: 120px;
+img {
+    display: block;
+    margin: 0 auto;
 }
 </style>
+</head>
 
+
+
+<div data-role="page" id="Body"> <!--new page identified as pagetwo-->
+ <center>
+  <div data-role="header">
+
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div data-role="content">
 <body>
-<div class="center">
+    <p>Click on the part of the body that you are experiencing a problem with...</p>
 
-<img src="https://i.imgur.com/xvE35B4.png" style="position:relative; top:0px; border:none;"/> <!--inserted image of head-->
-<img src="https://i.imgur.com/G8PRec3.png" style="position:relative; top:0px; left: 0px; border:none;"/>/> <!--inserted image of arms--> 
-<img src="https://i.imgur.com/jbKfj5H.png" style="position:relative; top:0px; left: 0px; border:none;"/> <!--inserted image of chest-->
-<img src="https://i.imgur.com/HmBKPNx.png" style="position:relative; top:0px;left: 0px; border:none;"/>/> <!--inserted image of abd-->
-<img src="https://i.imgur.com/2RrdJav.png" style="position:relative; top:0px;left: 0px; border:none;"/>/> <!--inserted image of pelvis-->
-<img src="https://i.imgur.com/0KWfosK.png" style="position:relative; top:0px; left:0px; border:none;"/>/> <!--inserted image of legs--> 
+<img src="https://i.imgur.com/5fUC8qJ.png" id="bdyMp" style="width:35%"  alt="bodyMap" usemap="bodyMap">
 
-</div>
+<map name="bodyMap">
+  <area shape="rect" coords="90,0,190,96" alt="Sun" href="head">
+
+</map>
 </body>
 
+    </div><!-- /content -->
+    <a href="#pageone" onclick="refresh();">Home</a> <!--restarts quiz by going to first page and calls function refresh which resets the probabilities-->
+  </div>
+
+  <div data-role="page" id="head"> <!--new page identified as head-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Head </h1> <!-- the name of this page is Head  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p>Head</p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:rgb(165, 224, 44);">DIY Diagnostics</h4> <!--green footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+  </div><!-- /page 1 -->
 </html>
 
