@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html> 
     <head>
+      <!--this is important information that is not to be seen on the page
+    It will scale everything to a reasonable size
+    It will also allow the page to be saved as a shortcut on smartphones-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <!--this links to a file containing CSS formatting provided by jQuery-->
@@ -8,6 +11,9 @@
       <!--these tags allow Javasript to be exxecuted-->
       <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      
+      <!-- the following link sets the icon image that will be placed on a device home screen if the user makes a shortcut-->
+      <link rel="apple-touch-icon" href="/custom_icon.png">
     </head>
 <script>
         // The following code lets you know when the file was last modified. 
@@ -16,55 +22,152 @@
         alert("This file last modified  " + docMod);
         console.log("This file last modified  " + docMod);
 </script>
-<style>
+<!--<style>
 img {
     display: block;
     margin: 0 auto;
 }
-</style>
+</style>-->
 </head>
 
 
 
-<div data-role="page" id="Body"> <!--new page identified as pagetwo-->
- <center>
+<div data-role="page" id="Body"> <!--body map page-->
   <div data-role="header">
 
   </div>
 
   <div data-role="main" class="ui-content">
     <div data-role="content">
-<body>
-    <p>Click on the part of the body that you are experiencing a problem with...</p>
+    <center>
+      <p>Click on the part of the body that you are experiencing a problem with...</p>
+    </center>
+    <img src="https://i.imgur.com/5fUC8qJ.png" id="bdyMp" style="width:260px"  alt="bodyMap" usemap="bodyMap">
 
-<img src="https://i.imgur.com/5fUC8qJ.png" id="bdyMp" style="width:35%"  alt="bodyMap" usemap="bodyMap">
+    <map name="bodyMap">
+     <area shape="rect" coords="85,0,175,90" alt="Sun" href="#head">
+     <area shape="rect" coords="85,90,175,185" alt="Sun" href="#chest">
+     <area shape="rect" coords="85,185,175,245" alt="Sun" href="#abd">
+     <area shape="rect" coords="70,245,190,315" alt="Sun" href="#pelvis">
+     <area shape="rect" coords="0,90,85,315" alt="Sun" href="#arms">
+     <area shape="rect" coords="175,90,260,315" alt="Sun" href="#arms">
+     <area shape="rect" coords="60,245,200,550" alt="Sun" href="#legs">
+    </map>
 
-<map name="bodyMap">
-  <area shape="rect" coords="90,0,190,96" alt="Sun" href="#head">
-
-</map>
-</body>
 
     </div><!-- /content -->
-    <a href="#pageone" onclick="refresh();">Home</a> <!--restarts quiz by going to first page and calls function refresh which resets the probabilities-->
+     <!---->
   </div>
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+</div>
 
-  <div data-role="page" id="head"> <!--new page identified as head-->
+<div data-role="page" id="head"> <!--new page identified as head-->
     <center> <!--Centers content of page-->
     <div data-role="header">
-      <h1>Head </h1> <!-- the name of this page is Head  -->
+      <h1>Head</h1> <!-- the name of this page is Head  -->
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-      <p>Head</p>
+      <p></p>
 
         
     </div><!-- /content -->
     
     <div data-role="footer" data-position="fixed">
-      <h4 style="color:rgb(165, 224, 44);">DIY Diagnostics</h4> <!--green footer-->
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
     </div><!-- /footer -->
     </center> <!--Centers content of page-->
-  </div><!-- /page 1 -->
-</html>
+</div><!-- body -->
 
+<div data-role="page" id="chest"> <!--new page identified as chest-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Chest</h1> <!-- the name of this page is Head  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p></p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+</div><!-- body -->
+
+<div data-role="page" id="abd"> <!--new page identified as abd-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Abdomen/GI</h1> <!-- the name of this page is Abdomen/GI  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p></p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+</div><!-- body -->
+
+<div data-role="page" id="pelvis"> <!--new page identified as abd-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Pelvis</h1> <!-- the name of this page is Pelvis  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p></p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+</div><!--upper  body -->
+
+<div data-role="page" id="arms"> <!--new page identified as abd-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Upper Extremities</h1> <!-- the name of this page is Abdomen/GI  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p></p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+</div><!-- body -->
+
+<div data-role="page" id="legs"> <!--new page identified as abd-->
+    <center> <!--Centers content of page-->
+    <div data-role="header">
+      <h1>Lower Extremities</h1> <!-- the name of this page is Abdomen/GI  -->
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+      <p></p>
+
+        
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed">
+      <h4 style="color:red;">easyER</h4> <!--red footer-->
+    </div><!-- /footer -->
+    </center> <!--Centers content of page-->
+</div><!-- body -->
+</html>
